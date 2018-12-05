@@ -6,7 +6,7 @@ import com.ctre.phoenix.motorcontrol.can.VictorSPX;
 import edu.wpi.first.wpilibj.Compressor;
 import edu.wpi.first.wpilibj.command.Subsystem;
 
-public class TestSubsystem extends Subsystem {}
+public class TestSubsystem extends Subsystem {
      
     public Compressor compressor = new Compressor(1);
 
@@ -32,11 +32,12 @@ public class TestSubsystem extends Subsystem {}
         setDefaultCommand(null);
     }
 
-    public boolean stopCompressor(){
+    public void stopCompressor(){
         compressor.stop();
+        
     }
 
-    public boolean startCompressor(){
+    public void startCompressor(){
         compressor.start();
     }
 
